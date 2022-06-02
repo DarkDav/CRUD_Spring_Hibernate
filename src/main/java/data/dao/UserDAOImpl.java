@@ -7,7 +7,8 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
-@Transactional
+
+
 @Repository
 public class UserDAOImpl implements UserDAO {
 
@@ -28,12 +29,6 @@ public class UserDAOImpl implements UserDAO {
     public void delete(int id) {
         entityManager.remove(getById(id));
     }
-
-
-   // @Override
-   // public void delete(User user) {
-   //     entityManager.remove(user);
-  //  }
 
     @Override
     public void change(User user) {
