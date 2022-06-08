@@ -14,4 +14,5 @@ public interface UserDAO {
     void change(User user);
 
     User getById(int id);
+
 }

@@ -35,9 +35,12 @@ public class UserDAOImpl implements UserDAO {
         entityManager.merge(user);
     }
 
+
     @Override
     public User getById(int id) {
         return entityManager.find(User.class, id);
     }
+
+
 }
 

@@ -10,6 +10,7 @@ import data.service.UserService;
 import java.util.List;
 
 @Controller
+
 public class UserController {
 
     private UserService userService;
@@ -20,7 +21,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping(value = "/")
+    @GetMapping("/")
     public String allUsers(Model model) {
         List<User> users = userService.allUsers();
         model.addAttribute("userList", users);
@@ -53,7 +54,8 @@ public class UserController {
         return "redirect:/";
     }
 
-    @GetMapping("/delete/{id}")
+
+    @DeleteMapping("/delete/{id}")
     public String delete(@PathVariable("id") int id) {
         userService.delete(id);
         return "redirect:/";

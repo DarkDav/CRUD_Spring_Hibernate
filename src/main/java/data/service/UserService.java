@@ -13,5 +13,4 @@ public interface UserService {
 
     void change(User user);
 
-    User getById(int id);
 }
